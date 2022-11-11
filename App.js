@@ -1,5 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import Book from './components/Book'
 
 export default function App() {
@@ -8,6 +10,11 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.title}>
         <Text>Bookshop</Text>
+      </View>
+
+      <View style={styles.shoppingcart}>
+        <FontAwesomeIcon icon={faShoppingCart} size={40} color={"black"} />
+        <Text>1</Text>
       </View>
 
       <Book 
@@ -46,6 +53,11 @@ const styles = StyleSheet.create({
   },
   book: {
     backgroundColor: '#fff',
+  },
+  image: {
+    width: 50,
+    height: 50,
+    color: 'black',
   },
   container: {
     flex: 1,
